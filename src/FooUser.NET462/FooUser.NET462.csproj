@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0C8DCC26-BB90-4FF7-A32C-2B1C6EC256C6}</ProjectGuid>
+    <ProjectGuid>{7649EAC4-9E72-455B-9333-4C8EA2AB0ED6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Walkthrough.Foo.NET462</RootNamespace>
-    <AssemblyName>Walkthrough.Foo.NET462</AssemblyName>
+    <RootNamespace>FooUser.NET462</RootNamespace>
+    <AssemblyName>FooUser.NET462</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,20 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Foo.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Walkthrough.Generators.NET462\Walkthrough.Generators.NET462.csproj">
-      <Project>{28e6c879-0bc9-4ae4-a2f7-7b0b5d5d5d9d}</Project>
-      <Name>Walkthrough.Generators.NET462</Name>
+    <ProjectReference Include="..\Walkthrough.Foo.NET462\Walkthrough.Foo.NET462.csproj">
+      <Project>{0c8dcc26-bb90-4ff7-a32c-2b1c6ec256c6}</Project>
+      <Name>Walkthrough.Foo.NET462</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="CodeGeneration.Roslyn.BuildTime" PrivateAssets="All">
-      <Version>0.4.11</Version>
-    </PackageReference>
-    <DotNetCliToolReference Include="dotnet-codegen" Version="0.4.11" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

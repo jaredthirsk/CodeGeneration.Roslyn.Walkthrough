@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.5</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Walkthrough.Foo.NETStandard15\Walkthrough.Foo.NETStandard15.csproj" />
+  </ItemGroup>
+
+</Project>

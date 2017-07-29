@@ -6,10 +6,12 @@
 
   <ItemGroup>
     <PackageReference Include="CodeGeneration.Roslyn.BuildTime" Version="0.4.11" PrivateAssets="All" />
+    <PackageReference Include="System.CommandLine" Version="0.1.0-e170729-1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Walkthrough.Generators.NETStandard15\Walkthrough.Generators.NETStandard15.csproj" />
+    <DotNetCliToolReference Include="dotnet-codegen" Version="0.4.11" />
   </ItemGroup>
 
 </Project>
