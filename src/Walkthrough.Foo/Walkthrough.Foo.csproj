@@ -1,16 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.5</TargetFramework>
+    <TargetFrameworks>netstandard1.5;net462</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="CodeGeneration.Roslyn.BuildTime" Version="0.4.11" PrivateAssets="All" />
-    <PackageReference Include="System.CommandLine" Version="0.1.0-e170729-1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Walkthrough.Generators.NETStandard15\Walkthrough.Generators.NETStandard15.csproj" />
+    <ProjectReference Include="..\Walkthrough.Generators\Walkthrough.Generators.csproj" />
     <DotNetCliToolReference Include="dotnet-codegen" Version="0.4.11" />
   </ItemGroup>
 
