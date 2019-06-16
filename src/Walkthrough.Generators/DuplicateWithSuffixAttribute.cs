@@ -1,7 +1,6 @@
 ﻿using CodeGeneration.Roslyn;
 using System;
 using System.Diagnostics;
-using Validation;
 
 [AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = true)]
 [CodeGenerationAttribute(typeof(DuplicateWithSuffixGenerator))]
@@ -10,7 +9,7 @@ public class DuplicateWithSuffixAttribute : Attribute
 {
     public DuplicateWithSuffixAttribute(string suffix)
     {
-        Requires.NotNullOrEmpty(suffix, nameof(suffix));
+        if (string.IsNullOrEmpty(suffix)) throw new ArgumentException("Must not be null or empty", nameof(suffix));
 
         this.Suffix = suffix;
     }
