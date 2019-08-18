@@ -5,7 +5,6 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Validation;
 
 public class DuplicateWithSuffixGenerator : ICodeGenerator
 {
@@ -13,7 +12,7 @@ public class DuplicateWithSuffixGenerator : ICodeGenerator
 
     public DuplicateWithSuffixGenerator(AttributeData attributeData)
     {
-        Requires.NotNull(attributeData, nameof(attributeData));
+        if (attributeData == null) throw new ArgumentNullException(nameof(attributeData));
 
         this.suffix = (string)attributeData.ConstructorArguments[0].Value;
     }
